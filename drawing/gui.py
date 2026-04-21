@@ -1,4 +1,9 @@
 #!/usr/bin/env python3
+
+#class pixel:
+#    def __init__(self, x, y):
+#        self.x=
+
 import pygame
 
 print("H3110, C4P7A1N!")
@@ -28,6 +33,10 @@ while run:
             x, y=event.pos
             print("{"+str(x//6)+","+str(y//6)+"}, ",end='')
             pygame.draw.rect(window, (255,255,255), (x, y, 6, 6))
+
+        elif event.type == pygame.KEYUP:
+            if event.key == pygame.K_s:
+                print("}")
 
     pygame.display.update()
     X1.tick(60)

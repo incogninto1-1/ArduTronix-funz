@@ -12,3 +12,5 @@ I made a prime number calculator, a random line generator, and now I am hyperfix
 
 Have fun, and make sure to credit me if you want to reuse my code. As long as you make sure to credit me, I will gladly let you reuse my code for whatever use case you have :D
 
+
+Also, credit is where credit's due. Thanks to Adafruit for providing the API to interact with the screen. You people are very cool :D

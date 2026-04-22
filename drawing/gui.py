@@ -52,6 +52,7 @@ while run:                                                          #while the p
                 print(str(len(stack)) + " N0D35 L0NG")
                                                                     #TODO(maybe): Save the final structure to a TXT file
             elif event.key == pygame.K_c:                           #If the key presses is 'c' (Compile)
+
                 print("WIP")                                        #TODO: Make a basic compiler that draws a preview 
 
     pygame.display.update()                                         #Refresh the screen

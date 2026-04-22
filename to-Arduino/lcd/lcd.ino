@@ -137,14 +137,56 @@ void setup() {
   tft.setTextSize(1);
   #pragma endregion
 
-  int shape[11][2] = {{15,104}, {15,59}, {38,40}, {81,39}, {103,56}, {103,104}, {79,122}, {71,113}, {63,126}, {48,111}, {33,127}};
-  path* thing = define_path(shape, 11);
+  int shape_1[11][2] = {{15,104}, {15,59}, {38,40}, {81,39}, {103,56}, {103,104}, {79,122}, {71,113}, {63,126}, {48,111}, {33,127}};
+  int shape_2[10][2] = {{37, 65},{36, 100},{44, 111},{82, 113},{91, 102},{91, 63},{83, 55},{76, 65},{48, 65},{44, 56}};
+  int shape_3[4][2] = {{51, 70},{52, 78},{59, 79},{60, 71}};
+  //int shape_4[4][2] = {{84, 68},{84, 79},{96, 79},{96, 69}};
+  int shape_4[4][2] = {{71, 70},{72, 80},{80, 80},{81, 70}};
+  int shape_5[3][2] = {{60, 97},{76, 98},{68, 107}};
+  
+
+  path* thing = define_path(shape_1, 11); //Hair
 
 
   draw_path(thing->head);
 
   nuke_path(thing->head);
 
+
+
+  path* f_base = define_path(shape_2, 10); //face
+
+  draw_path(f_base->head);
+
+  nuke_path(f_base -> head);
+
+
+  path* l_eye = define_path(shape_3, 4); //left eye
+
+  draw_path(l_eye->head);
+
+  nuke_path(l_eye -> head);
+
+
+
+  path* r_eye = define_path(shape_4, 4); //right eye
+
+  draw_path(r_eye->head);
+
+  nuke_path(r_eye -> head);
+
+
+
+  path* mouth = define_path(shape_5, 3); //mouth
+
+  draw_path(mouth->head);
+
+  nuke_path(mouth -> head);
+
+
+
+  tft.setCursor(0, 130);
+  tft.println("Osaka");
 
 
   //What I am going to do next is NOT RECCOMENDED. This is a classic software vulnerability that is called use after free. It is when you free a pointer, but then continue to use it. In this case, I am going to free the path that I just drew, and then try to draw it again. This will cause undefined behavior, and may cause the program to crash or do something unexpected. I am doing this for educational purposes only, and I do not reccomend doing this in any real code.

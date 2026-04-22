@@ -52,8 +52,15 @@ while run:                                                          #while the p
                 print(str(len(stack)) + " N0D35 L0NG")
                                                                     #TODO(maybe): Save the final structure to a TXT file
             elif event.key == pygame.K_c:                           #If the key presses is 'c' (Compile)
+                for i in range(len(stack)):
+                    print("compiling element " + str(i))
+                    if i == (len(stack)-1):
+                        pygame.draw.line(window, (255, 255, 255), (stack[i].x, stack[i].y), (stack[0].x, stack[0].y))
 
-                print("WIP")                                        #TODO: Make a basic compiler that draws a preview 
+                    else:
+                        pygame.draw.line(window, (255, 255, 255), (stack[i].x, stack[i].y), (stack[i+1].x, stack[i+1].y))
+                        
+
 
     pygame.display.update()                                         #Refresh the screen
     X1.tick(60)                                                     #Wait for the timer
